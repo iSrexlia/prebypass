@@ -141,11 +141,9 @@ GMT.__namecall = newcclosure(function(self, ...)
 end)
 setreadonly(GMT, true)
 for _,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
-    print("found ScriptContext error detection, removing")
     v:Disable()
  end
  for _,v in pairs(getconnections(game:GetService("LogService").MessageOut)) do
-    print("found LogService output detection, removing")
     v:Disable()
  end
  local mt = getrawmetatable(game)
@@ -172,7 +170,6 @@ for _,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
  hookfunction(game:GetService("Players").LocalPlayer.Kick,protect(function() 
      wait(9e9) 
  end))
-print("Universal Anti-Exploit Bypasser Loaded. Have Fun :)")
     end
 
     spawn(function()
@@ -416,7 +413,6 @@ end
     if premium or dev then
     prebypasses()
     pby = true
-    print("Premium Bypasser Loaded. Have Fun!")
     end
     end)
     end)
